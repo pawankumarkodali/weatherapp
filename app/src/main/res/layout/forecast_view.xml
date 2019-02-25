@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_cloudy_day_grey" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="21.30&#xb0;c in hyderabad"
+        android:textSize="25sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toRightOf="@id/ivWeather"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Description"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toRightOf="@id/ivWeather"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+    <!--Temp1-->
+    <TextView
+        android:id="@+id/tvMinTemp1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@+id/tvMinTemp2"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvMaxTemp1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@+id/tvMaxTemp2"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp1" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivWeatherIcon2"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/tvMaxTemp1"
+        tools:src="@drawable/ic_cloudy_day_grey" />
+
+    <TextView
+        android:id="@+id/tvTime1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="8 PM"
+        app:layout_constraintEnd_toStartOf="@+id/tvTime2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherIcon1" />
+
+    <!--Temp2-->
+    <TextView
+        android:id="@+id/tvMinTemp2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMinTemp3"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMinTemp1"
+        app:layout_constraintStart_toEndOf="@id/tvMinTemp1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvMaxTemp2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMaxTemp3"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMaxTemp1"
+        app:layout_constraintStart_toEndOf="@id/tvMaxTemp1"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp2"
+
+        />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintEnd_toStartOf="@id/ivWeatherIcon3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/ivWeatherIcon1"
+
+        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTemp2"
+        tools:src="@drawable/ic_cloudy_day_grey"
+
+        />
+
+    <TextView
+        android:id="@+id/tvTime2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="8 PM"
+        app:layout_constraintEnd_toStartOf="@id/tvTime3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tvTime1"
+        app:layout_constraintStart_toEndOf="@id/tvTime1"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherIcon2" />
+
+    <!--Temp3-->
+    <TextView
+        android:id="@+id/tvMinTemp3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMinTemp4"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMinTemp2"
+        app:layout_constraintStart_toEndOf="@id/tvMinTemp2"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvMaxTemp3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMaxTemp4"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMaxTemp2"
+        app:layout_constraintStart_toEndOf="@id/tvMaxTemp2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp3"
+
+        />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintEnd_toStartOf="@id/ivWeatherIcon4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/ivWeatherIcon2"
+
+        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTemp3"
+        tools:src="@drawable/ic_cloudy_day_grey" />
+
+    <TextView
+        android:id="@+id/tvTime3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="8 PM"
+        app:layout_constraintEnd_toStartOf="@id/tvTime4"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvTime2"
+        app:layout_constraintStart_toEndOf="@id/tvTime2"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherIcon3" />
+
+    <!--Temp4-->
+    <TextView
+        android:id="@+id/tvMinTemp4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMinTemp5"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMinTemp3"
+        app:layout_constraintStart_toEndOf="@id/tvMinTemp3"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvMaxTemp4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toStartOf="@id/tvMaxTemp5"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvMaxTemp3"
+        app:layout_constraintStart_toEndOf="@id/tvMaxTemp3"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp4" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintEnd_toStartOf="@id/ivWeatherIcon5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/ivWeatherIcon3"
+
+        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTemp4"
+        tools:src="@drawable/ic_cloudy_day_grey" />
+
+    <TextView
+        android:id="@+id/tvTime4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="8 PM"
+        app:layout_constraintEnd_toStartOf="@id/tvTime5"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@id/tvTime3"
+        app:layout_constraintStart_toEndOf="@id/tvTime3"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherIcon4" />
+
+    <!--Temp5-->
+    <TextView
+        android:id="@+id/tvMinTemp5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tvMinTemp4"
+        app:layout_constraintStart_toEndOf="@id/tvMinTemp4"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvMaxTemp5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="21&#xb0;C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tvMaxTemp4"
+        app:layout_constraintStart_toEndOf="@id/tvMaxTemp4"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp5" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/ivWeatherIcon3"
+
+        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon4"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTemp4"
+        tools:src="@drawable/ic_cloudy_day_grey" />
+
+    <TextView
+        android:id="@+id/tvTime5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="8 PM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tvTime4"
+        app:layout_constraintStart_toEndOf="@id/tvTime4"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherIcon5" />
+
+</android.support.constraint.ConstraintLayout>

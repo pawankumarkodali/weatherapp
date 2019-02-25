@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="getatest">get latest</string>
+    <string name="updatecity">update city</string>
+    <string name="getforecast">get forecast</string>
+    <string name="getweather">get weather</string>
+    <string name="editor_input">Hyderabad,IN</string>
+    <string name="city_header">Enter city name</string>
+    <string name="enter_valid_city">Please provide valid city name</string>
+    <string name="invalid_forecat_data">Invalid forecast data</string>
+    <string name="temparature_format">%1$.2f&#xb0;C</string>
+    <string name="last_update_time_string">Last updated: %1$s</string>
+
+</resources>
